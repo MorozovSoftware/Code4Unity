@@ -2,10 +2,10 @@ using System.Collections.Generic;
 
 namespace MorozovSoftware.GameSystem
 {
-    public interface IScenarioStorage
+    public interface IStorage
     {
-        void Save(ScenarioData scenario);
-        ScenarioData Load(string name);
+        void Add(GameData gameData);
+        GameData Get(string name);
         void Delete(string name);
         IEnumerable<string> GetNames();
     }
