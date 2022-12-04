@@ -43,8 +43,7 @@ namespace MorozovSoftware.GameSystem
             {
                 foreach (var entity in entities.Value)
                 {
-                    var entityInstance = _entitySpawner.Spawn(entities.Key);
-                    entityInstance.SetData((JObject)entity);
+                    _entitySpawner.Spawn(entities.Key).SetData((JObject)entity);
                 }
             }
         }
