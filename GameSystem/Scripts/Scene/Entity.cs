@@ -10,11 +10,13 @@ namespace MorozovSoftware.GameSystem
         private string _resource;
         public string Resource => _resource;
 
+#if UNITY_EDITOR
         [ContextMenu("update resource path")]
         private void UpdatePath()
         {
             _resource = PathTools.GetResourcePath(this);
         }
+#endif
 
         public object GetData()
         {

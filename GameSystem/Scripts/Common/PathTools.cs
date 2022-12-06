@@ -12,10 +12,12 @@ namespace MorozovSoftware.GameSystem
             return CorrectSlash(Application.persistentDataPath, Style.System);
         }
 
+#if UNITY_EDITOR
         public static string GetResourcePath(Object prefab)
         {
             return GetRelativePath(AssetDatabase.GetAssetPath(prefab), "Resources", Style.Unity);
         }
+#endif
 
         public static string CorrectSlash(string path, Style style)
         {
